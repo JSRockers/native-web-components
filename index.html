@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trying WebComponents</title>
+    <script>
+        class MyElement extends HTMLElement {
+            constructor() {
+                super();
+                console.log('Custom Element is constructed');
+            }
+
+            // life cycle callback methods
+            connectedCallback() {
+                console.log('Custom element is being added to the DOM');
+            }
+
+            disconnectedCallback() {
+                console.log('Custom elment is being removed from the DOM');
+            }
+
+            // we can also listen to attribute changes onour elment 
+            // first we have to get the attribute we want to listen for
+
+            static get  observedAttributes() {
+                return ['demo'];
+            }
+
+            attributeChangedCallback(name, oldValue, newValue) {
+                console.log('Attribute changed', name, oldValue, newValue);
+            } 
+        }
+
+        // tell the browser about the custom element
+        window.customElements.define('custom-element', MyElement);
+    </script>
+</head>
+<body>
+    <script>
+        //to see all the lifecycle callbacks in action we neeed to create it dynamically
+        let $element = document.createElement('custom-element');
+        setTimeout(() => {
+            // adding element to the DOM
+            document.body.appendChild($element);
+        }, 2000); 
+
+        setTimeout(() => {
+            // modify the 'demo' attribnute
+            document.querySelector('custom-element').setAttribute('demo', '123');
+        }, 4000);
+
+        setTimeout(() => {
+            // change value of the 'demo' attribnute
+            document.querySelector('custom-element').setAttribute('demo', '1903');
+        }, 6000);
+
+                setTimeout(() => {
+            // remove the custom  element
+            document.querySelector('custom-element').remove();
+        }, 8000);
+    </script>
+</body>
+</html>
