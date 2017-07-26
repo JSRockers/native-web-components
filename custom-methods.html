@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./webcomponents.png">
+    <title>Trying WebComponents</title>
+    <script>
+        class  DivisionElement extends HTMLElement {
+          divideByTwo(value){
+            console.log(parseInt(value)/2);
+          }
+        }
+        //register the component
+        window.customElements.define('do-division', DivisionElement);
+
+        class MultiplyElement  extends DivisionElement {
+          multiplyByTwo(value) {
+            console.log(parseInt(value) * 2);
+          }
+        }
+
+        window.customElements.define('do-multiplication', MultiplyElement);
+
+    </script>
+</head>
+<body>  
+
+  <do-division></do-division>
+  <do-multiplication></do-multiplication>
+  
+  <script>
+    //get  the element and do didvision
+    document.querySelector('do-division').divideByTwo(20);
+    document.querySelector('do-multiplication').multiplyByTwo(10);
+  </script>
+</body>
+</html>
