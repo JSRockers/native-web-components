@@ -1,0 +1,29 @@
+<template>
+  <style>
+    h1 {
+      color: red;
+    }
+    p {
+      color: green;
+    }
+  </style>
+
+  <h1>My Web Component</h1>
+  <p>A better way using  HTML Imports</p>
+</template>
+
+<script>
+  // storing the contents
+  const $owner = (document._currentScript || document.currentScript).ownerDocument;
+  // storing the template 
+  const $template = $owner.querySelector('template');
+
+  class MyComponent extends HTMLElement {
+    connectedCallback() {
+      const $contents = document.importNode($template.content, true);
+      this.appendChild($contents);
+    }
+  }
+
+  window.customElements.define('my-component', MyComponent);
+</script>
