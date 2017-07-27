@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trying WebComponents| Shadow DOM</title>
+  <style>
+    p {
+      color: red;
+      margin-top: 3em;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde eius eligendi corrupti porro excepturi tenetur, odit accusantium assumenda, quod sunt atque id! Alias veniam dolore, laudantium recusandae id illo voluptatem.
+  </p>
+  <div id="simple-div"></div>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptates eum, iure adipisci facilis quam. Libero minus, neque magnam numquam vero aspernatur culpa cum iusto quo ratione totam recusandae impedit.
+  </p>
+  <script>
+    let $div = document.querySelector('#simple-div');
+    $div.attachShadow({mode: 'open'});
+    // adding custom content, styles and scripts to thediv
+    $div.shadowRoot.innerHTML =  `
+      <style>
+        p {
+          color: blue;
+          margin-top: 3em;
+          font-size: 1.2em;
+        }
+      </style>
+      <p id="inner">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptates eum, iure adipisci facilis quam. Libero minus, neque magnam numquam vero aspernatur culpa cum iusto quo ratione totam recusandae impedit.
+      </p>
+    `;
+  </script>
+</body>
+</html>
