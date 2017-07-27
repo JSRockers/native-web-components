@@ -20,4 +20,4 @@ Files under this section are:
 * [Creating Shadow DOM](adding-shadowDOM.html) [_Right click on the blue  paragraph to see Shandow DOM in action_]
 
 **Further reading:** _[
-Shadow DOM v1: Reusable Web Components](https:goo.gl/t8nPzf)_
+Shadow DOM v1: Reusable Web Components](https://goo.gl/t8nPzf)_
