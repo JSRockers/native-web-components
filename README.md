@@ -44,7 +44,7 @@ HTML Imports](https://goo.gl/D6fM5f)_
 
 I'll be using this method from now onwards 
 
-[Using separate JS file](./GoodComponent) 
+### [Using separate JS file](./GoodComponent) 
 
 ### Pros 
 * Todo
@@ -54,7 +54,7 @@ I'll be using this method from now onwards
 
 ## Method II of writting web components
 
-[Using HTML Imports](./BetterComponent) 
+### [Using HTML Imports](./BetterComponent) 
 
 ### Pros 
 * Todo
@@ -67,7 +67,9 @@ I'll be using this method from now onwards
 
 Covered in random quote component.
 
-## [RandomQuotes Component](./RandomQuotes)
+# Components
+
+### [RandomQuotes Component](./RandomQuotes)
 
 * Displays a quote every 10s 
  
