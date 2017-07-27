@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./webcomponents.png">
+    <title>Trying WebComponents</title>
+    <!-- custom element v1 polyfill -->
+    <script src="vendor/document-register-element.js"></script>
+    <script>
+      class CustomAnchor extends HTMLAnchorElement {
+        connectedCallback() {
+          this.addEventListener('click', (e) => {
+            e.preventDefault();
+            const result = confirm('Are you sure?');
+            if(result) {
+              window.location.href = e.target.href;
+            }
+          })
+        }
+      }
+
+      // registering the custom anchor element 
+      window.customElements.define('custom-a', CustomAnchor, {extends: 'a'});
+      // since we're extending a native elemetn we need to specify the third parameter,
+      // telling the browser which element to modify
+    </script>
+</head>
+<body>  
+
+  <a is="custom-a" href="https://google.com" target="_blank">Go to Google</a>
+
+  <script>
+  </script>
+</body>
+</html>
