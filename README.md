@@ -35,7 +35,40 @@ HTML's New <template\>](https://goo.gl/LQezsL)_
 
 Files under this section are: 
 
-* [Importing HTML Contents](html-imports.html) [_Inspect the document and checkthenetwork tab_]
+* [Importing HTML Contents](html-imports.html) [_Inspect the document and check the network tab_]
 
 **Further reading:** _[
 HTML Imports](https://goo.gl/D6fM5f)_
+
+## Method I of writting web components
+
+I'll be using this method from now onwards 
+
+[Using separate JS file](./GoodComponent) 
+
+### Pros 
+* Todo
+
+### Cons 
+* Todo
+
+## Method II of writting web components
+
+[Using HTML Imports](./BetterComponent) 
+
+### Pros 
+* Todo
+
+### Cons 
+* Todo
+
+
+## BestPractices 
+
+Covered in random quote component.
+
+## [RandomQuotes Component](./RandomQuotes)
+
+* Displays a quote every 10s 
+ 
+
