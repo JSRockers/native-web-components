@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./webcomponents.png">
+  <title>Trying WebComponents| HTML Imports</title>
+  <!-- html imports here -->
+  <link rel="import" href="imports/notice.html" id="notice">
+</head>
+<body>
+  <script>
+    const $link = document.getElementById('notice');
+    const content = $link.import.querySelector('.notice-frame');
+    document.body.appendChild(content);
+  </script>
+</body>
+</html>

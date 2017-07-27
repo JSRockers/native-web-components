@@ -30,3 +30,12 @@ Files under this section are:
 
 **Further reading:** _[
 HTML's New <template\>](https://goo.gl/LQezsL)_
+
+## HTML Imports
+
+Files under this section are: 
+
+* [Importing HTML Contents](html-imports.html) [_Inspect the document and checkthenetwork tab_]
+
+**Further reading:** _[
+HTML Imports](https://goo.gl/D6fM5f)_
