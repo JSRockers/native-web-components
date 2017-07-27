@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trying WebComponents| HTML Template</title>
+</head>
+<body>
+  <!-- defining a template -->
+  <template id="list-items">
+    <li>
+      <h1>Item</h1>
+      <p>Description</p>
+    </li>
+  </template>
+
+  <!-- the list of items -->
+  <ul id="lorem-list"></ul>
+
+  <script>
+    const items = [
+      {
+        name: 'Angular',
+        purpose: 'Frontend web framework'
+      },
+      {
+        name: 'React',
+        purpose: 'The best view library'
+      },
+      {
+        name: 'Preact',
+        purpose: 'The small sized react'
+      }
+    ];
+
+    const $template = document.querySelector('#list-items');
+    const $list = document.querySelector('#lorem-list');
+
+    items.forEach((tech) =>{
+      const $clone = document.importNode($template.content, true);
+      $clone.querySelector('h1').innerHTML = tech.name;
+      $clone.querySelector('p').innerHTML = tech.purpose;
+
+      $list.appendChild($clone);
+    }); 
+  </script>
+
+</body>
+</html>
