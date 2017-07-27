@@ -12,3 +12,12 @@ Files under this section are:
 
 **Further reading:** _[
 Custom Elements v1: Reusable Web Components](https://developers.google.com/web/fundamentals/getting-started/primers/customelements)_
+
+## Shadow DOM 
+
+Files under this section are: 
+
+* [Creating Shadow DOM](adding-shadowDOM.html) [_Right click on the blue  paragraph to see Shandow DOM in action_]
+
+**Further reading:** _[
+Shadow DOM v1: Reusable Web Components](https:goo.gl/t8nPzf)_
